@@ -26,7 +26,7 @@ int main (void)
     scanf("%d", &many);
 
     for (i=0;i<many;i++)
-        {   printf("Enter what you need to calculate followed by a space and the unit");
+        {   printf("Enter what you need to calculate followed by a space and the unit\n");
             scanf("%lf %s",&quantity1,unit);
             {
 
@@ -38,7 +38,7 @@ int main (void)
                         final = miles(quantity1);
                         //switch the units
                         //print result
-                        printf("%lf %s",final,mi);
+                        printf("%lf %s\n",final,mi);
                     }
                 }
             comparisoncm =strncmp (unit, cm,2);
@@ -49,7 +49,7 @@ int main (void)
                         final = inches(quantity1);
                         //switch the units
                         //print result
-                        printf("%lf %s",final,in);
+                        printf("%lf %s\n",final,in);
                     }
                }
 
@@ -61,7 +61,7 @@ int main (void)
                         final = fahrenheit(quantity1);
                         //switch the units
                         //print result
-                        printf("%lf %s",final,F);
+                        printf("%lf %s\n",final,F);
                     }
                }
             comparisonkg = strncmp(unit, kg,2);
@@ -73,7 +73,7 @@ int main (void)
                         //switch the units
 
                         //print result
-                        printf("%lf %s",final, lbs);
+                        printf("%lf %s\n",final, lbs);
                     }
                 }
 
@@ -88,28 +88,28 @@ return 0;
 
 
 
-double fahrenheit(double a);
+double fahrenheit(double a)
     {
         int result;
         result = (a - 32) * .5555;
         return result;
     }
 
-double pounds (double b);
+double pounds (double b)
     {
         int result;
         result = b * 2.205;
         return result;
     }
 
-double miles (double c);
+double miles (double c)
     {
         int result;
         result = c * .621371;
         return result;
     }
 
-double inches (double d);
+double inches (double d)
     {
         int result;
         result = d * 2.54;
