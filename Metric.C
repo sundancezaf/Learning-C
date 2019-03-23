@@ -38,30 +38,30 @@ int main (void)
                         final = miles(quantity1);
                         //switch the units
                         //print result
-                        printf("%lf %s\n",final,mi);
+                        printf("%lf mi \n",final);
                     }
                 }
             comparisoncm =strncmp (unit, cm,2);
                    {
-                      if (comparisoncm==0)
+                     if (comparisoncm==0)
                     {
                         //call function
                         final = inches(quantity1);
                         //switch the units
                         //print result
-                        printf("%lf %s\n",final,in);
+                        printf("%lf in\n",final);
                     }
                }
 
             comparisonC = strncmp(unit, C, 1);
                {
-                if (comparisonC ==0)
+                 if (comparisonC ==0)
                     {
                         //call function
                         final = fahrenheit(quantity1);
                         //switch the units
                         //print result
-                        printf("%lf %s\n",final,F);
+                        printf("%lf F\n",final);
                     }
                }
             comparisonkg = strncmp(unit, kg,2);
@@ -73,7 +73,7 @@ int main (void)
                         //switch the units
 
                         //print result
-                        printf("%lf %s\n",final, lbs);
+                        printf("%lf lbs\n",final);
                     }
                 }
 
@@ -112,6 +112,6 @@ double miles (double c)
 double inches (double d)
     {
         int result;
-        result = d * 2.54;
+        result = d * .39307;
         return result;
     }
