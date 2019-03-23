@@ -1,6 +1,8 @@
+//This program switches Metric measurements to imperial units
 #include <stdio.h>
 #include <string.h>
 
+//function prototypes
 double fahrenheit(double a);
 double pounds (double b);
 double miles (double c);
@@ -9,6 +11,8 @@ double inches (double d);
 
 int main (void)
 {
+
+   //establishing arrays to be able to use the strncmp function
     int i, many, comparisonkm, comparisoncm, comparisonC, comparisonkg;
     double quantity1;
     double final;
@@ -25,6 +29,8 @@ int main (void)
     printf("how many calculations?");
     scanf("%d", &many);
 
+//loop that accepts user input and converts units
+
     for (i=0;i<many;i++)
         {   printf("Enter what you need to calculate followed by a space and the unit\n");
             scanf("%lf %s",&quantity1,unit);
@@ -36,7 +42,7 @@ int main (void)
                     {
                         //call function
                         final = miles(quantity1);
-                        //switch the units
+                        //switch units inside print statement
                         //print result
                         printf("%lf mi \n",final);
                     }
@@ -47,7 +53,7 @@ int main (void)
                     {
                         //call function
                         final = inches(quantity1);
-                        //switch the units
+                        //switch units inside print statement
                         //print result
                         printf("%lf in\n",final);
                     }
@@ -59,7 +65,7 @@ int main (void)
                     {
                         //call function
                         final = fahrenheit(quantity1);
-                        //switch the units
+                        //switch units inside print statement
                         //print result
                         printf("%lf F\n",final);
                     }
@@ -70,7 +76,7 @@ int main (void)
                     {
                         //call function
                         final = pounds(quantity1);
-                        //switch the units
+                        //switch units inside print statement
 
                         //print result
                         printf("%lf lbs\n",final);
@@ -86,7 +92,7 @@ return 0;
 
 }
 
-
+//custom functions
 
 double fahrenheit(double a)
     {
@@ -96,7 +102,7 @@ double fahrenheit(double a)
     }
 
 double pounds (double b)
-    {
+   {
         int result;
         result = b * 2.205;
         return result;
