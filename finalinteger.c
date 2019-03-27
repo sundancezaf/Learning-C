@@ -1,4 +1,7 @@
+/*This program compares the integers in an array and prints
+out the smallest integer using a custom function */
 #include <stdio.h>
+
 int min(int x, int y);
 
 int main (void)
