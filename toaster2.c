@@ -1,3 +1,8 @@
+/*Your program should calculate the amount of memory required to store the given variables.
+ Your program needs to be written in such a way that it would also perform 
+ correctly on other computers. In other words, rather than hard-coding specific sizes 
+ for the different variable types, your program needs to use the "sizeof()" function to 
+ determine how much memory an individual variable of a given type needs.*/
 #include <stdio.h>
 #include <string.h>
 
@@ -15,8 +20,12 @@ int main(void)
     int quantity, final;
     double fine;
 
+//C = Character, D = Double, S = Short, I = Integer
+
         scanf("%s", &word);
         scanf("%d", &quantity);
+
+//useless loop (maybe?) will update later but it compares things
 
                 for(int i=0; i<strlen(word);i++)
                     {       
@@ -41,6 +50,8 @@ int main(void)
                         }
 
                     }
+//convert to kilo or megabytes
+
                          if (final >= 1000 && final < 1000000)
                             { 
                                fine= kilobyte(final);
@@ -58,6 +69,8 @@ int main(void)
 
     return 0;
 }
+
+//bring on the functions!!!
 
 int integersize (int x)
     {
@@ -82,6 +95,8 @@ int shortsize (int x)
         int result;
         return result = (sizeof(short)*x);
     }
+
+ //divide the bytes   
 int kilobyte (int t)
     {
         double result;
