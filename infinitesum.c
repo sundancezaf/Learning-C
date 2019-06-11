@@ -1,3 +1,5 @@
+/*This program adds two integers, prints the sum, asks for another integer
+that is added to previous sum; this is done in a loop */
 #include <stdio.h>
 int main (void)
 
