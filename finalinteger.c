@@ -16,7 +16,6 @@ int main (void)
                 smallestint = min(smallestint, list[i+1]);
             }
 
-
         printf("%d", smallestint);
 
         return 0;
@@ -30,7 +29,6 @@ int min (int x, int y)
     {
         result = x;
     }
-
     else 
     {
         result = y;
