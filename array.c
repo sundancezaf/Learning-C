@@ -25,7 +25,6 @@ for (cell= 0; cell < 3; cell++)
 
 }
 
-
 return 0;
 
 }
