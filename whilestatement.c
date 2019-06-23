@@ -4,7 +4,6 @@ int main(void) {
     int diceValue = 0;
     int throws = 0;
 
-
     while(diceValue != 6){
         scanf("%d", &diceValue);
         throws = throws +1;
