@@ -8,7 +8,6 @@ double pounds (double b);
 double miles (double c);
 double inches (double d);
 
-
 int main (void)
 {
 
