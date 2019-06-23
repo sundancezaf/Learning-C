@@ -6,7 +6,6 @@ line 1 or line 2 */
 
 int main (void)
 {
-
     char name[50];
     int number = 0;
 
@@ -16,8 +15,6 @@ int main (void)
         {
             number++;
         }
-
-
 
     if (number % 2 == 1)
     {
