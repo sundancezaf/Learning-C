@@ -21,13 +21,11 @@ for (k =0;k<n-1;k++)//first loop that goes around 10 times
                 list[i+1]=swap;
 
             }
-
         }
 }
     for (j=0;j<10;j++)
     {
     printf("%d,", list[j]);
     }
-
     return 0;
 }
