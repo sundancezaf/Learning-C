@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int addNumbers(int a, intb); //function prototype
-
 int main(void)
 
 {
