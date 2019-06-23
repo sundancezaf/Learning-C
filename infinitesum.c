@@ -9,7 +9,6 @@ int main (void)
    int number2;
    int sum;
    int i;
- 
 
    scanf("%d\n", &number1);
    scanf("%d", &number2);
@@ -23,11 +22,6 @@ int main (void)
        sum = number1 + number2;
        printf("%d\n", sum);
    }
-
-    
-
-   
-
 
 return 0;
 
