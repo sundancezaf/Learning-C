@@ -3,42 +3,37 @@ The user is asked for a word (verb, noun, etc.) and then it prints out the story
 #include <stdio.h>
 int main (void)
 {
-    char noun1[20];
-    char noun2[20];
-    char noun3[20];
-
+    char profession1[20];
+    char city[20];
+    char animal[20];
     char verb1[20];
-    char verb2[20];
-    char verb3[20];
-
     char adverb1[20];
-    char adverb2[20];
-    char adverb3[20];
-    
+    char color1[20];
     char adjective1[20];
-    char adjective2[20];
-    char adjective3[20];
 
 
     printf("Please enter a verb (a verb is an action, state, or occurrence. Ex: run, eats, ate)\n");
-    scanf("%c",&verb1);
+    scanf("%s",verb1);
     
     printf("Please enter a profession\n");
-    scanf("%c\n",&noun1);
+    scanf("%s",profession1);
 
-    printf("Please enter an adjective (an adjective names an attribte. Ex:blue, sad, happy, clean)\n");
-    scanf("%c\n",&adjective1);
+    printf("Please enter an adjective (an adjective names an attribte. Ex:dirty, sad, happy, clean)\n");
+    scanf("%s",adjective1);
 
     printf("Please enter a color\n");
-    scanf("%c\n",&adjective2);
+    scanf("%s",color1);
 
     printf("Please enter the name of an animal\n");
-    scanf("%c\n",&noun2); 
+    scanf("%s",animal); 
 
     printf("Please enter the name of a city\n");
-    scanf("%c\n",&noun3);
+    scanf("%s",city);
 
-    printf("Today I went to the zoo. I %c as fast as I could to escape the %c. \n Next thing I knew I was wearing a %c shirt over my ankles! The %c then\n proceeded to jump on the %c! What a wild night at the %c zoo.", verb1, noun2, adjective2, noun2, noun1, noun3);
+    printf("Today I went to the zoo. I %s as fast as I could to escape the %s.\n"
+    "Next thing I knew I was wearing a %s shirt over my ankles!" 
+    "The %s then proceeded to jump on the %s! \n"
+    "What a wild night at the %s zoo.", verb1, profession1, color1, animal, profession1, city);
 
 return 0;
 }
