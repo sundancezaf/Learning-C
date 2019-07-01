@@ -4,15 +4,18 @@
 
 int main (void)
 {
-
-/*Simple array. Here in this array "players" is an actual pointer - if we were to ask for the address
+/* Here in this array "players" is an actual pointer - if we were to ask for the address
 it will print out the address where the array begins*/
 
     int players[] = {4, 9, 2};
+
+//Here we make 2 integer pointer variables
     int *ptr, *ptr2;
 
-//Printing out what is stored in the array and the addresses
+//Printing out what is stored in the array 
     printf("What we have so far: %d, %d, %d\n",players[0], players[1],players[2]);
+
+//To print the addresses we use "&" 
 
     printf("The addresses: %p, %p, %p\n", &players[0], &players[1],&players[2]);
 
@@ -21,13 +24,17 @@ it will print out the address where the array begins*/
 //giving ptr the same address as the start of the array
     ptr = players;
 
-//giving pointers a different value 
+//Giving a pointer a different value:
     ptr2 = &players[1];
-    printf("What we have at ptr2: %d\n",*ptr2);
-
-//printing what we have now at ptr2
+    printf("What we have as pointed by ptr2: %d\n",*ptr2);
     *ptr2 = 10;
-    printf("%d\n",*ptr2);
+    printf("We now have: %d\n",*ptr2);
+
+//This is the same:  ptr2 == (ptr+1)
+
+//Dereferencing other way -- in which (ptr+1) == players[2]
+    *(ptr+1) = 76;
+    printf("This is thew new value dereferenced by ptr2: %d\n", *ptr2);
 
 return 0;
 
