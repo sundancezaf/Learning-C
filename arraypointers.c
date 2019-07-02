@@ -32,7 +32,7 @@ it will print out the address where the array begins*/
 
 //This is the same:  ptr2 == (ptr+1)
 
-//Dereferencing other way -- in which (ptr+1) == players[2]
+//Dereferencing another way -- in which (ptr+1) == players[2]
     *(ptr+1) = 76;
     printf("This is thew new value dereferenced by ptr2: %d\n", *ptr2);
 
