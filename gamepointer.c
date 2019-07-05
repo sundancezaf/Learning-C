@@ -1,6 +1,5 @@
 /* You are participating in a game in which players collect points for various solved puzzles.
-In the end, the player with the highest score wins. You would like to know how far behind 
-the highest-scoring person everyone else is in. 
+In the end, the player with the highest score wins. 
 
 Please write a C program that uses a function "behind()" (which you also have to write)
 in order to help with this task.
@@ -14,23 +13,22 @@ the array holding the player's scores, and as a second argument the number
 of players in the game. The function behind should
 replace the scores stored in the array with the number of points by
 which each individual player is behind the top-scoring player.
-
-To help you out, the main function of the program has already been written, 
-so your job is simply to write the function behind(), whose protype is also given to you. */
+ */
 
 #include <stdio.h> 
 
-
+void top (int * ptr, int );
+//start of main function
 int main (void)
 
 {
     int size, j;
-    int highest = 0;
-    int players[10];
-    int H = 10;
-    
+    int *firstArray;
+
     printf("Please enter the number of players: \n");
     scanf ("%d",&size);
+
+    int players[size];
 
     for (j=0; j<size; j++)
     {
@@ -38,18 +36,29 @@ int main (void)
         scanf("%d", &players[j]);
     }
 
-    for (j=0; j<size; j++)
-    {
-        if (players[j] > players[j+1])
-            {
-                highest = players[j];
-            } 
-    }
-   
+     top(players, size);
     
-    printf("%d\n", highest);
 
+return 0;
 
-
-    return 0;
 }
+void top (int * ptr, int length)
+{
+    int l;
+    int highest = 0;
+    for (l=0; l<length; l++)
+    {
+        if (ptr[l]>ptr[l++])
+        {
+            highest = ptr[l];
+        }
+        else
+        {
+            highest= ptr[l++];
+        }
+    }
+    
+    printf("%d",highest);
+}
+
+
