@@ -7,7 +7,7 @@ int min(int x, int y);
 int main (void)
 
     {
-        int list[10] = {3, 4, 82,23,44,12,7,9,13, 24};
+        int list[10] = {3, 4, 82,23,2,12,7,9,13, 24};
         int i;
         int smallestint = list[0];
 
