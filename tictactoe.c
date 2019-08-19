@@ -5,36 +5,38 @@ void printboard(char aboard[5][10] );
 int main (void)
 
 {
-//Have to make the board first
 
-
+//The board
 char board[5][10] = {{'\0','\0','\0','|','\0','\0','\0','|','\0','\0'},
                     {'_','_','_','|','_','_','_','|','_','_'},
                     {'\0','\0','\0','|','\0','\0','\0','|','\0','\0'},
                     {'_','_','_','|','_','_','_','|','_','_'},
-                    {'\0','\0','\0','|','\0','\0','\0','|','\0','\0'},
+                    {'\0','\0','\0','|','\0','\0','\0','|','\0','\0'}};
 
-                };
-
-
-
+//-----------------let's print the board----------------------------
 printboard(board);
 
-//Now we need our players
-char player1= 'X';
-char player2='O';
+//spacing in the board
+printf("\n");
+printf("\n");
+
+
 int quadrant;
+char quadrant1 = board[1][2];
 
-printf("\n");
-printf("\n");
-
+//Asking where to place the marker
 printf("Please enter a quadrant:");
 scanf("%d",&quadrant);
 
+if (quadrant == 1)
+{
+   quadrant1 = 'X';
+}
 
+//Print the updated board
+printboard(board);
 
 return 0;
-
 }
 
 
@@ -51,3 +53,5 @@ for (l = 0;l<5;l++)
     }
 }
 }
+
+
